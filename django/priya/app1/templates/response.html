@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>My App</title>
+</head>
+<body>
+<table border="2px">
+   {% for user in data %}
+        {{ user.firstname}}
+        {{ user.lastname}}
+        {{ user.email_id}}
+        {{ user.phone_number}}
+        {{ user.address}}
+   {% endfor %}
+</table>
+</body>
+</html>
