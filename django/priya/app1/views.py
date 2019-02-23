@@ -36,6 +36,19 @@ def login1(request):
 def index(request):
     return render(request,'index.html')
 
+@login_required
+def courses(request):
+       return render(request, 'courses.html')
+@login_required
+def about(request):
+       return render(request, 'about.html')
+
+@login_required
+def contactus(request):
+       return render(request, 'contactus.html')
+
+
+
 
 
 
