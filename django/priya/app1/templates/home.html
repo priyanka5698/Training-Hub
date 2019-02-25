@@ -1,9 +1,22 @@
 {% extends 'base.html' %}
-
 {% block content %}
+    <style>
+    {% load static %}
+        .imageContainer {
+       width:200px;
+       height:200px;
+       body{
+       background-image: url("{% static "images/baby.jpg" %}");
+       }
+ }
+    </style>
+
   {% if user.is_authenticated %}
-   <h2>Welcome, {{ user.username }}!</h2>
+<h2><font color="orange">Welcome, {{ user.username }}!</font></h2>
   {% else %}
    <h2>you are not logged in!</h2>
   {% endif %}
+{% load static %}
+<img src="{% static "images/baby.jpg" %}" alt="My image" width=100%/>
+
 {% endblock %}

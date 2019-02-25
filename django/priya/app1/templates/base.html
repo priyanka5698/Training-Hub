@@ -88,7 +88,6 @@ color:pink !important;
 
    @media screen and (min-width:800px) {
 
-
 }
       </style>
 
@@ -127,7 +126,7 @@ color:pink !important;
 
       <h1><center>Welcome to Python & PLSQL courses</center></h1>
       {% if user.is_authenticated %}
-<a href="{% url 'logout' %}"><button type="logout"><font color="red">logout</font></button></a>
+<a href="{% url 'logout' %}"><button type="logout" style="float:right; margin-right:10px; margin-top:-100px;"><font color="red">logout</font></button></a>
       {% else %}
 <a href="{% url 'login1' %}"><center><button type="login">login</button></a> &nbsp; <a href="{% url 'regform' %}"><button type="registration">registration</button></center></a>
       {% endif %}
@@ -138,15 +137,15 @@ color:pink !important;
 
         <footer class="page-footer">
           <div class="footer-copyright">
-            <div class="container">
-            © 2014 Copyright
+            <font class="container">
+                © 2019 Copyright Acharya Tech <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Created with love  by Priyanka Gokavarapu
                 <a class="waves-effect waves-light btn-floating social google right">
 <i class="fa fa-google"></i> Sign in with Google</a>
               <a class="waves-effect waves-light btn-floating social facebook right">
 <i class="fa fa-facebook"></i> Sign in with facebook</a>
+            </font> </div>
 
-            </div>
-          </div>
         </footer>
 </div>
   </body>
@@ -159,5 +158,4 @@ $(document).ready(function() {
   });
 
  </script>
-
 </html>
