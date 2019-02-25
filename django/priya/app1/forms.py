@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render
+from .models import ContactUs
 
 
 class RegForm(UserCreationForm):
@@ -25,7 +26,13 @@ class Login(forms.Form):
                 if not user:
                     raise forms.ValidationError('This user does not exist')
                 if not user.check_password(password):
-                    raise forms.ValidationError('Mot de passe incorrecte')
+                    raise forms.ValidationError('Password is incorrect')
                 if not user.is_active:
                     raise forms.ValidationError('plus valide')
             return super(Login, self).clean(*args, **kwargs)
+
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = ContactUs
+        exclude = ('',)

@@ -1,6 +1,8 @@
 from django.contrib import admin
 from . import models
-from . models import Regform1
+from . models import Regform1,ContactUs
 
 # Register your models here.
 admin.site.register(Regform1)
+admin.site.register(ContactUs)
+

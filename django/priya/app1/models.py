@@ -10,6 +10,22 @@ class Regform1(models.Model):
     phone_number = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.firstname
 
-def __str__(self):
-    return self.firstname
+Bussiness_Unit = (
+    ('eas','EAS'),
+    ('analytics', 'Analytics'),
+    ('suneralab','Sunera Lab'),
+)
+
+class ContactUs(models.Model):
+     Name = models.CharField(max_length=100)
+     Email = models.CharField(max_length=100)
+     Unit = models.CharField(max_length=50, choices=Bussiness_Unit, default='eas')
+     Subject = models.CharField(max_length=200)
+
+     def __str__(self):
+         return self.Name
+
+

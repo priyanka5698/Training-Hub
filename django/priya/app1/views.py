@@ -1,8 +1,9 @@
 from django.shortcuts import render,redirect
-from .forms import RegForm,Login
+from .forms import RegForm,Login,ContactForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
+from django.contrib import messages
 
 # Create your views here.
 @login_required
@@ -15,6 +16,8 @@ def regform(request):
         form = RegForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Registration successful.Please enter username and password!')
+            return redirect('login1')
     else:
         form = RegForm()
     return render(request, 'regform.html', {'form': form})
@@ -45,7 +48,14 @@ def about(request):
 
 @login_required
 def contactus(request):
-       return render(request, 'contactus.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = ContactForm()
+    return render(request, 'contactus.html', {'form': form})
+
 
 
 

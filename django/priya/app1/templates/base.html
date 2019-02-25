@@ -12,13 +12,16 @@
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
      <style>
-html{
+html,body{
           font-size: 16px;
-        }
+          height:100%;
+          position: relative;
+                  }
         h1{
           font-size: 3rem;
 
         }
+
         h2{
          font-size: 2.4em
         }
@@ -43,10 +46,27 @@ html{
           background-color: pink !important;
 
         }
+        main {
+        margin:20px;
+        }
+        .main-container {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: 100px; /* height of your footer */
+}
+
         .side-nav li a{
 color:pink !important;
         }
+.page-footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
+
+}
         @media screen and (max-width:800px) {
           html{
           font-size: 12px;
@@ -65,109 +85,9 @@ color:pink !important;
 
         }
       }
-        @media screen and (min-width:1000px) {
-        .nav-content{
-          padding-right: 2%;
-        }
-        .nav-content ul {
-          display:flex;
-          flex-direction: row-reverse;
-        }
-        .brand-logo{
-
-          margin:0px;
-        }
-        }
-        a:hover{
-color:tomato !important;
-        }
-
 
    @media screen and (min-width:800px) {
 
-
-
-
-.logo-n-desc1 i{
-  padding-top: 50px;
-  font-size: 60px;
-
-}
-.logo-n-desc2 i{
-  padding-top: 50px;
-  font-size: 60px;
-
-}
-.logo-n-desc3 i{
-  padding-top: 50px;
-  font-size: 60px;
-
-}
-
-
-}
-@media screen and (max-width:800px) {
-.responsive {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height:400px;
-}
-}
-.responsive{
-  height:700px;
-  display:grid;
-  background-image: url("images/responsive1.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat ;
-
-
-
-}
-@media screen and (min-width:800px) {
-
-
-.logo-desc i{
- padding:10% 0 3% 15%;
-
-}
-.logo-desc h3{
- padding-left :10%;
- color:whitesmoke;
-
-}
-.logo-desc h4{
- padding-left :10%;
-
-}
-
-
-}
-@media screen and (max-width:800px){
-
-
-.logo-desc i{
- padding:10px 0 10px 20px;
-
-}
-.logo-desc h3{
- padding-left :15px;
- color:whitesmoke;
-
-}
-.logo-desc h4{
- padding-left :15px;
-
-}
-          }
-
-@media screen and (max-width:600px){
-
-.head-text{
-  text-align: center;
-
-  }
 
 }
       </style>
@@ -175,6 +95,7 @@ color:tomato !important;
     <title>{% block title %}Python{% endblock %}</title>
   </head>
 <body>
+<div class="main-container">
 <div class="navbar-fixed">
   <nav class="nav-extended">
       <div class="nav-wrapper">
@@ -182,20 +103,19 @@ color:tomato !important;
         <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-           <li><a href="home">Home</a></li>
-            <li><a href="course">courses</a></li>
-            <li><a href="about">About</a></li>
-            <li ><a href="contact">Contact</a></li>
+           <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'courses' %}">courses</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li ><a href="{% url 'contactus' %}">Contact</a></li>
 
         </ul>
         <ul class="side-nav" id="mobile-demo">
 
-            <li ><a href="product.html">Home</a></li>
-            <li ><a href="services.html">Courses</a></li>
-            <li><a href="learning.html">Courses</a></li>
-            <li ><a href="placement.html">Contact</a></li>
+            <li ><a href="home.html">Home</a></li>
+            <li ><a href="courses.html">Courses</a></li>
+            <li ><a href="about.html">About</a></li>
+            <li ><a href="contactus.html">Contact</a></li>
 
-            <li ><a href="aboutus.html">Why cosmai</a></li>
 
         </ul>
       </div>
@@ -207,9 +127,9 @@ color:tomato !important;
 
       <h1><center>Welcome to Python & PLSQL courses</center></h1>
       {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">logout</a>
+<a href="{% url 'logout' %}"><button type="logout"><font color="red">logout</font></button></a>
       {% else %}
-  <a href="{% url 'login1' %}"><center><button type="login">login</button></a> &nbsp; <a href="{% url 'regform' %}"><button type="registration">registration</button></center></a>
+<a href="{% url 'login1' %}"><center><button type="login">login</button></a> &nbsp; <a href="{% url 'regform' %}"><button type="registration">registration</button></center></a>
       {% endif %}
     <main>
       {% block content %}
@@ -228,9 +148,9 @@ color:tomato !important;
             </div>
           </div>
         </footer>
-
+</div>
   </body>
-<!--Import jQuery before materialize.js-->
+
  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
  <script>
