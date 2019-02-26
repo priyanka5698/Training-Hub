@@ -1,4 +1,4 @@
-#!/home/priyanka/Desktop/django/env/bin/python
+#!/home/pawan/Desktop/Training-Hub/django/env/bin/python
 
 import sys
 import getopt
