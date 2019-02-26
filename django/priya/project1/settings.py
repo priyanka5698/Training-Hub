@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+########## EMAIL CONFIGURATION
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+########## END EMAIL CONFIGURATION
 
 # Application definition
 
@@ -82,9 +86,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME' :'pta_expansion',
+        'NAME' :'expansion',
         'USER':'root',
-        'PASSWORD':'priyoop666',
+        'PASSWORD':'toor',
         'HOST':'localhost',
         'PORT':'3036'
 

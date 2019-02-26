@@ -1,4 +1,4 @@
-#!/home/priyanka/Desktop/django/env/bin/python2
+#!/home/pawan/Desktop/Training-Hub/django/env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
