@@ -29,8 +29,16 @@ ALLOWED_HOSTS = []
 
 ########## EMAIL CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ########## END EMAIL CONFIGURATION
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'Acharya Tech <noreply@example.com>'
+
+
+
 
 # Application definition
 
@@ -86,7 +94,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME' :'pta _expansion',
+        'NAME' :'pta_expansion',
         'USER':'root',
         'PASSWORD':'priyoop666',
         'HOST':'localhost',

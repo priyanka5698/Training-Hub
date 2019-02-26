@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
+<style>
+    .contact{
+    width:50%;
+    }
+
+</style>
 <div>
-<h2><b><center><font color ='red'>CONTACT US</font></center></b></h2>
-<p><center><marquee><font color = "green">Email us with any questions or inquiries or call 9949215264. We would be happy to answer your questions and setup a meeting with you.</font></marquee></center></p>
+<h3><i><center><font color ='red'>CONTACT US</font></center></i></h3>
+<p><marquee><font color = "green">Email us with any questions or inquiries or call 9949215264. We would be happy to answer your questions and setup a meeting with you.</font></marquee></p>
+   <div class="contact">
     <form method="post" action ="">
           {% csrf_token %}
         <table>
@@ -12,5 +19,6 @@
 
 
     </form>
+   </div>
 </div>
 {% endblock %}

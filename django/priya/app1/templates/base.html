@@ -13,7 +13,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
      <style>
 html,body{
-          font-size: 16px;
+
           height:100%;
           position: relative;
                   }
@@ -39,7 +39,7 @@ html,body{
           color: black !important;
         }
         nav{
-          background-color:pink !important;
+          background-color:lightblue !important;
 
         }
         .side-nav{
@@ -49,7 +49,23 @@ html,body{
         main {
         margin:20px;
         }
-        .main-container {
+        button{
+           background-color:white;
+           border-radius:15px;
+           font-size:15px;
+           padding: 5px 30px;
+           color:green;
+
+        }
+
+
+img#logo.responsive-img, video.responsive-video {
+    max-width: 9%;
+    height: auto;
+    margin-left:30px;
+}
+
+               .main-container {
  min-height: 100vh; /* will cover the 100% of viewport */
  overflow: hidden;
  display: block;
@@ -58,15 +74,18 @@ html,body{
 }
 
         .side-nav li a{
-color:pink !important;
+color:lightblue !important;
         }
 .page-footer{
   position: absolute;
   bottom: 0;
+  padding-top:0;
   width: 100%;
-
-
+  background-color: lightblue;
 }
+
+
+
         @media screen and (max-width:800px) {
           html{
           font-size: 12px;
@@ -96,14 +115,15 @@ color:pink !important;
 <body>
 <div class="main-container">
 <div class="navbar-fixed">
-  <nav class="nav-extended">
+    <nav>
       <div class="nav-wrapper">
-        <a href="index.html" class="brand-logo">Logo</a>
+          {% load static %}
+        <a href="{% url 'index' %}"><img class="responsive-img" id="logo" src="{% static "images/logo.jpg" %}"/></a>
         <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             {% if user.is_authenticated %}
             <li class="pull-right" style="margin-right:10px;"><a class="Black-text" href="{% url 'logout' %}">Sign Out</a></li>
-            <li><p class="navbar-text black-text">Hi, {{ user.get_full_name }}</p></li>
+            <li><p class="navbar-text green-text">Hi, {{ user.first_name }}</p></li>
            {% endif %}
             <li><a href="{% url 'home' %}">Home</a></li>
             <li><a href="{% url 'courses' %}">courses</a></li>
@@ -123,12 +143,9 @@ color:pink !important;
     </nav>
     </div>
 
-
-
-
-      <h1><center>Welcome to Python & PLSQL courses</center></h1>
       {% if user.is_authenticated %}
       {% else %}
+     <h3><center><i><font color="purple">Welcome to Python & PLSQL courses</font></i></center></h3>
 <a href="{% url 'login1' %}"><center><button type="login">login</button></a> &nbsp; <a href="{% url 'regform' %}"><button type="registration">registration</button></center></a>
       {% endif %}
     <main>
@@ -138,14 +155,21 @@ color:pink !important;
 
         <footer class="page-footer">
           <div class="footer-copyright">
-            <font class="container">
+            <font class="container" color="black" style="font-size:12px;">
                 © 2019 Copyright Acharya Tech <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Created with love  by Priyanka Gokavarapu
-                <a class="waves-effect waves-light btn-floating social google right">
-<i class="fa fa-google"></i> Sign in with Google</a>
-              <a class="waves-effect waves-light btn-floating social facebook right">
-<i class="fa fa-facebook"></i> Sign in with facebook</a>
-            </font> </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Created by Sunera Intern(EAS)</font>
+
+<!--Facebook icon-->
+<a href="https://facebook.com/flashissue" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/ueBIjxRoTBuYR6XWW1iO_v3qVW5nRUq5VZF9RQXi2_twitter.png" /> </a>&nbsp; &nbsp; &nbsp;
+<!--Google+ icon-->
+<a href="http://plus.google.com" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/gHd2XoyiQbKBqljm7bzg_63j3xtd7SX28TTMeOSfZ_google.png" /> </a>&nbsp; &nbsp;&nbsp;
+<!--Twitter icon-->
+<a href="https://facebook.com/14221A0565" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/MsIJsIsDT9WLAxxH4aIK_OgdHV3vxSR2737LGd8cq_facebook.png" /> </a>&nbsp; &nbsp;&nbsp;
+<!--Linkedin icon-->
+<a href="http://pinterest.com" target="_blank"><img alt="" src="https://s3.amazonaws.com/flashissue/b8Xt2lN8TCKhilmoHXGW_TCjqF6FgS86WoWzUOQCh_pinterest.png" /> </a>&nbsp; &nbsp;&nbsp;
+
+
+          </div>
 
         </footer>
 </div>

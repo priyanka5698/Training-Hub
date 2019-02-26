@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
+<style>
+    .form{
+          width:50%;
+    }
+</style>
     <h2>Registration</h2>
+<div class="form">
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Submit</button>
 
-
     </form>
+</div>
 {% endblock %}
