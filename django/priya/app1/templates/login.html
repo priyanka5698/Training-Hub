@@ -1,17 +1,7 @@
 
 {% extends 'base.html' %}
 {% block content %}
-<style>
- .row button{
-           background-color:white;
-           border-radius:15px;
-           font-size:15px;
-           padding: 5px 30px;
-           color:green;
 
-        }
-
-</style>
 {% if messages %}
 <ul>
 	{% for message in messages %}
@@ -28,7 +18,7 @@
         <input type='hidden', name="next",value=" {{ next }}"/>
         {{ form.as_p }}
          <label style='float: right;'>
-              <a class='pink-text' href="{% url 'password_reset' %}"  style="font-style:italic; font-size:1em; padding-top:-10px; "><u>Forget Password?</u></a>
+              <a class='pink-text' href="{% url 'password_reset' %}"  style="font-style:italic; font-size:1em;"><u>Forget Password?</u></a>
 							</label>
         <div class='row'>
                 <button type='submit'>Login</button>
