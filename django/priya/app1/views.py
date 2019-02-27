@@ -4,10 +4,19 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
+from django.conf import settings
+from django.core.files.storage import FileSystemStorage
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 @login_required
 def home(request):
+    if request.method == 'POST' and request.FILES['myfile']:
+        myfile = request.FILES['myfile']
+        fs = FileSystemStorage()
+        fs.save(myfile.name, myfile)
+        messages.success(request, 'Successfully Uploaded! Admin will review the task. Thank You!')
+        return render(request, 'home.html')
     return render(request, 'home.html')
 
 
@@ -52,20 +61,8 @@ def contactus(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Thank You! for contacting us, we will get back to you soon.')
+            return HttpResponseRedirect('/contact/')
     else:
         form = ContactForm()
     return render(request, 'contactus.html', {'form': form})
-
-
-
-
-
-
-
-def response(request):
-
-    pta = Regform1.objects.filter(email_id = 'pawanacharya1979@gmail.com')
-    formdata = {
-        'data': pta
-    }
-    return render(request, 'response.html', formdata)

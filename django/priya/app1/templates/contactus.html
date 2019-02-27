@@ -10,13 +10,19 @@
 <h3><i><center><font color ='red'>CONTACT US</font></center></i></h3>
 <p><marquee><font color = "green">Email us with any questions or inquiries or call 9949215264. We would be happy to answer your questions and setup a meeting with you.</font></marquee></p>
    <div class="contact">
-    <form method="post" action ="">
+       {% if messages %}
+<ul>
+	{% for message in messages %}
+	   <li>{{ message }}</li>
+	{% endfor %}
+</ul>
+	{% endif %}
+    <form method="post">
           {% csrf_token %}
         <table>
           {{ form.as_p }}
             </table>
           <button type="submit">Submit</button>
-
 
     </form>
    </div>

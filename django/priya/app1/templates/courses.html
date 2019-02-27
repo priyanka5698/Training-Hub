@@ -1,12 +1,45 @@
 {% extends 'base.html' %}
 {% block content %}
-   <h1><u><center>courses:</center></u></h1>
-   <p>We are offering below courses for the freshers to make them trained for upcoming projects.</p>
+<style>
+    h3{
+     color:skyblue;
+    }
+  .white-text u{
+  color:white;
+  }
+  .card-panel{
+  padding:10px;
+  border-radius:10px;
+  }
+</style>
+<h3><u><i>Acharya Tech courses:</i></u></h3><br>
+   <p>We provide KT for new joinee in below listed courses to make them ready for upcoming projects.</p>
 
-<ul>
-    <li><a href ='https://www.geeksforgeeks.org/python-programming-language/'><u>Python Programming</u></a></li>
-    <li><a href = 'https://www.tutorialspoint.com/plsql/'><u>PlSql</u></a></li>
-    <li><a href = 'https://docs.djangoproject.com/en/2.1/'><u>Django(Web Development)</u></a></li>
+<div class="row">
+      <div class="col s12 ">
+        <div class="card-panel teal">
+          <span class="white-text">
+              <a href ='https://www.geeksforgeeks.org/python-programming-language/'><u>Python Programming</u></a>
+          </span>
+        </div>
+           <div class="card-panel teal">
+          <span class="white-text">
+              <a href = 'https://www.tutorialspoint.com/plsql/'><u>PlSql</u></a>
+          </span>
+        </div>
+           <div class="card-panel teal">
+          <span class="white-text">
+              <a href = 'https://docs.djangoproject.com/en/2.1/'><u>Django(Web Development)</u></a>
+          </span>
+        </div>
+          <div class="card-panel teal">
+          <span class="white-text">
+              <a href = 'https://www.tutorialspoint.com/nodejs/'><u>Node JS</u></a>
+          </span>
+        </div>
+      </div>
+    </div>
+<p>We have provided some popular links found in google for above courses.For complete courses please contact
+    Acharya Tech. We will provide basics and Advanced Training for Interns.</p>
 
-</ul>
 {% endblock %}

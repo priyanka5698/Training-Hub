@@ -60,7 +60,7 @@ html,body{
 
 
 img#logo.responsive-img, video.responsive-video {
-    max-width: 9%;
+    max-width: 5%;
     height: auto;
     margin-left:30px;
 }
@@ -118,7 +118,7 @@ color:lightblue !important;
     <nav>
       <div class="nav-wrapper">
           {% load static %}
-        <a href="{% url 'index' %}"><img class="responsive-img" id="logo" src="{% static "images/logo.jpg" %}"/></a>
+        <a href="{% url 'index' %}"><img class="responsive-img" id="logo" src="{% static "images/acharya.png" %}"/></a>
         <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             {% if user.is_authenticated %}
