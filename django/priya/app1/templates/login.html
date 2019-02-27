@@ -2,9 +2,14 @@
 {% extends 'base.html' %}
 {% block content %}
 <style>
-    .form{
-    width:50%;
-    }
+ .row button{
+           background-color:white;
+           border-radius:15px;
+           font-size:15px;
+           padding: 5px 30px;
+           color:green;
+
+        }
 
 </style>
 {% if messages %}
@@ -14,14 +19,21 @@
 	{% endfor %}
 </ul>
 {% endif %}
-    <h2>Login</h2>
-<div class ="form">
+<center>
+    <h5 class="indigo-text"><i>Please, login into your account</i></h5>
+     <div class="container">
+        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
     <form method="post">
         {% csrf_token %}
         <input type='hidden', name="next",value=" {{ next }}"/>
         {{ form.as_p }}
-        <button type="submit">Submit</button>
-        <a href="{% url 'password_reset' %}"  style="font-style:italic; font-size:0.8em; padding:10px; "><font color="red"><u>Forget Password?</u></font></a>
+         <label style='float: right;'>
+              <a class='pink-text' href="{% url 'password_reset' %}"  style="font-style:italic; font-size:1em; padding-top:-10px; "><u>Forget Password?</u></a>
+							</label>
+        <div class='row'>
+                <button type='submit'>Login</button>
+              </div>
     </form>
 </div>
+     </div></center>
 {% endblock %}
