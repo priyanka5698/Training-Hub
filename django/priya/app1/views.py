@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .forms import RegForm,Login,ContactForm
+from .forms import RegForm,Login,ContactForm,AssignmentForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
@@ -11,13 +11,7 @@ from django.http import HttpResponseRedirect
 # Create your views here.
 @login_required
 def home(request):
-    if request.method == 'POST' and request.FILES['myfile']:
-        myfile = request.FILES['myfile']
-        fs = FileSystemStorage()
-        fs.save(myfile.name, myfile)
-        messages.success(request, 'Successfully Uploaded! Admin will review the task. Thank You!')
         return render(request, 'home.html')
-    return render(request, 'home.html')
 
 
 def regform(request):
@@ -66,3 +60,18 @@ def contactus(request):
     else:
         form = ContactForm()
     return render(request, 'contactus.html', {'form': form})
+
+@login_required
+def assignment(request):
+    if request.method == 'POST' and request.FILES['myfile']:
+        form = AssignmentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            myfile = request.FILES['myfile']
+            fs = FileSystemStorage()
+            fs.save(myfile.name, myfile)
+            messages.success(request, 'Successfully Uploaded! Admin will review the task. Thank You!')
+        return HttpResponseRedirect('/assignments/')
+    else:
+        form = AssignmentForm()
+    return render(request, 'assignment.html', {'form': form})

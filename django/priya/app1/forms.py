@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render
-from .models import ContactUs
+from .models import ContactUs,Assignment1
 
 
 class RegForm(UserCreationForm):
@@ -35,4 +35,9 @@ class Login(forms.Form):
 class ContactForm(forms.ModelForm):
     class Meta:
         model = ContactUs
+        exclude = ('',)
+
+class AssignmentForm(forms.ModelForm):
+    class Meta:
+        model = Assignment1
         exclude = ('',)

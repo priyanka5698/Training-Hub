@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+
+.card-panel{
+  padding:10px;
+  border-radius:10px;
+  }
+
+</style>
+<div class="col s12 ">
+        <div class="card-panel teal">
+          <span class="white-text">
+                <h4><u><i>Interns are requested to submit their Assignment as Task gets completed</i></u></h4>
+          </span>
+        </div>
+</div>
+<p><marquee><font color = "green">Assignments will be verified by admin, Interns will get rating based on Assignment Submitted.Each Assignments consists of points which helps in judging interns activities through Provisional Period so that he/she is ready for upcoming project.</font></marquee></p>
+
+	{% if messages %}
+<ul>
+	{% for message in messages %}
+	   <li>{{ message }}</li>
+	{% endfor %}
+</ul>
+	{% endif %}
+<div class="assignment">
+       <div class = "row">
+       <div class="side col s6">
+ <h5 class="indigo-text"><i>Assignment Form</i></h5>
+        <div class="z-depth-1 grey lighten-4 row" style="display: block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+     <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" multiple name="myfile">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+      </div>
+    </div>
+         <button type="submit">Upload</button>
+  </form>
+        </div></div></div></div>
+{% endblock %}

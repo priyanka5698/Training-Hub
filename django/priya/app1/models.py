@@ -28,4 +28,25 @@ class ContactUs(models.Model):
      def __str__(self):
          return self.Name
 
+class Assignment(models.Model):
+    Traineename = models.CharField(max_length=100)
+    Totalassignments = models.IntegerField()
 
+
+    def __str__(self):
+        return self.Traineename
+
+CourseName = (
+    ('python','Python'),
+    ('plsql', 'PlSql'),
+    ('Django','Django'),
+    ('Node.js','Node.js'),
+)
+
+class Assignment1(models.Model):
+    TraineeName = models.CharField(max_length=100, verbose_name="Name")
+    AssignmentName = models.CharField(max_length=100, verbose_name="Assignment Name")
+    CourseName= models.CharField(max_length=50,choices=CourseName, default='Python', verbose_name="Course")
+
+    def __str__(self):
+        self.TraineeName
