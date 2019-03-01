@@ -31,6 +31,11 @@ class ContactUs(models.Model):
 class Assignment(models.Model):
     Traineename = models.CharField(max_length=100)
     Totalassignments = models.IntegerField()
+    Totalassignmentscompleted = models.IntegerField()
+    Totalassignmentspending = models.IntegerField()
+    Email = models.EmailField()
+
+
 
 
     def __str__(self):

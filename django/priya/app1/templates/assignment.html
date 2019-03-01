@@ -6,7 +6,11 @@
   padding:10px;
   border-radius:10px;
   }
-
+  .data{
+    display:flex;
+       flex-flow: row;
+          padding:50px 45px 0 50px;
+}
 </style>
 <div class="col s12 ">
         <div class="card-panel teal">
@@ -43,5 +47,24 @@
     </div>
          <button type="submit">Upload</button>
   </form>
-        </div></div></div></div>
+        </div></div>
+       <div class = "data">
+           <table style="width:300px; border:1; ">
+      <tr>
+        <td>  {% for s in details %} </td>
+               <tr> <th>Name:</th> <td>   {{ s.Traineename }} </td></tr><tr><th>Total Assignment</th>
+               <td> {{ s.Totalassignments }}</td></tr>
+              <tr> <tr><th>Completed</th>
+               <td> {{ s.Totalassignmentscompleted }}</td></tr>
+               <tr><th>Pending</th>
+                   <td> {{ s.Totalassignmentspending }}</td></tr>
+              </tr>
+        {% endfor %}
+      </tr>
+    </table>
+
+
+       </div>
+
+       </div></div>
 {% endblock %}

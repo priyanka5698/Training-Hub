@@ -7,11 +7,12 @@ from django.contrib import messages
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponseRedirect
+from .models import Assignment1,Assignment
 
 # Create your views here.
 @login_required
 def home(request):
-        return render(request, 'home.html')
+    return render(request, 'home.html')
 
 
 def regform(request):
@@ -74,4 +75,8 @@ def assignment(request):
         return HttpResponseRedirect('/assignments/')
     else:
         form = AssignmentForm()
-    return render(request, 'assignment.html', {'form': form})
+        #info2 = request.user
+        #email = info2.email
+        info = Assignment.objects.filter(Email=request.user.email)
+    return render(request, 'assignment.html', {'form': form, 'details': info})
+
