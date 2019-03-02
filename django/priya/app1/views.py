@@ -8,6 +8,7 @@ from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponseRedirect
 from .models import Assignment1,Assignment
+from django.core.mail import EmailMessage
 
 # Create your views here.
 @login_required
@@ -56,6 +57,18 @@ def contactus(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
+            name = form.cleaned_data.get('Name')
+            email = form.cleaned_data.get('Email')
+            unit = form.cleaned_data.get('Unit')
+            subject = form.cleaned_data.get('Subject')
+            body = {'Name':name,'Email':email,'Unit':unit,'Subject':subject},
+
+            email = EmailMessage(
+                'Contact From',
+                str(body),
+                to=['pawanacharya1979@gmail.com']
+            )
+            email.send()
             messages.success(request, 'Thank You! for contacting us, we will get back to you soon.')
             return HttpResponseRedirect('/contact/')
     else:
@@ -68,6 +81,17 @@ def assignment(request):
         form = AssignmentForm(request.POST)
         if form.is_valid():
             form.save()
+            name = form.cleaned_data.get('TraineeName')
+            assignmentname = form.cleaned_data.get('AssignmentName')
+            course = form.cleaned_data.get('CourseName')
+            body = {'Name': name, 'AssignmentName': assignmentname ,'Unit': course},
+
+            email = EmailMessage(
+                'Assignment Form',
+                str(body),
+                to=['pawanacharya1979@gmail.com']
+            )
+            email.send()
             myfile = request.FILES['myfile']
             fs = FileSystemStorage()
             fs.save(myfile.name, myfile)
