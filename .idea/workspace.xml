@@ -2,55 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61c6cd98-224b-440e-98ae-91a213137e56" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/django/.idea/django.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/migrations/0002_regform1_password.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/migrations/0003_login.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/migrations/0004_auto_20190219_0944.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/migrations/0005_contactus.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/migrations/0006_auto_20190224_1035.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/migrations/0007_auto_20190224_1043.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/migrations/0008_auto_20190225_1551.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/migrations/0009_assignment_assignment1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/migrations/0010_auto_20190301_0957.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/migrations/0011_assignment_email.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/static/images/acharya.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/static/images/baby.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/static/images/image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/static/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/static/images/nature.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/templates/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/templates/assignment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/templates/contactus.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/templates/courses.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/templates/regform.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/templates/response.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/app1/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/media/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/media/logo_0KiJoVS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/project1/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/project1/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/project1/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/project1/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django/priya/pta_expansion" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project1/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,10 +14,52 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="40" selection-start-column="40" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runtime.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project1/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="126" column="75" selection-start-line="126" selection-start-column="75" selection-end-line="126" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/project1/settings.py" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="75" />
@@ -75,6 +72,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -82,11 +80,15 @@
               <item name="Training-Hub" type="b2602c69:ProjectViewProjectNode" />
               <item name="Training-Hub" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Training-Hub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Training-Hub" type="462c0819:PsiDirectoryNode" />
+              <item name="project1" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -119,8 +121,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1215" height="804" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -131,7 +134,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.394387" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.394387" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -140,61 +143,36 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/django/priya/app1/views.py">
+    <entry file="file://$PROJECT_DIR$/django/priya/app1/views.py" />
+    <entry file="file://$PROJECT_DIR$/django/priya/app1/templates/about.html" />
+    <entry file="file://$PROJECT_DIR$/django/priya/app1/templates/assignment.html" />
+    <entry file="file://$PROJECT_DIR$/django/priya/app1/admin.py" />
+    <entry file="file://$PROJECT_DIR$/django/priya/app1/urls.py" />
+    <entry file="file://$PROJECT_DIR$/django/priya/project1/urls.py" />
+    <entry file="file://$PROJECT_DIR$/django/priya/app1/models.py" />
+    <entry file="file://$PROJECT_DIR$/django/priya/project1/settings.py" />
+    <entry file="file://$PROJECT_DIR$/django/priya/app1/forms.py" />
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django/priya/app1/templates/about.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django/priya/app1/templates/assignment.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django/priya/app1/admin.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django/priya/app1/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django/priya/project1/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#617#658#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django/priya/app1/models.py">
+    <entry file="file://$PROJECT_DIR$/runtime.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/django/priya/project1/settings.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django/priya/app1/forms.py">
+    <entry file="file://$PROJECT_DIR$/project1/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="235">
+          <caret line="126" column="75" selection-start-line="126" selection-start-column="75" selection-end-line="126" selection-end-column="75" />
         </state>
       </provider>
     </entry>
