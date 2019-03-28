@@ -25,7 +25,7 @@ SECRET_KEY = '7bw1cbm@+9_r(8$twnpqtdt08g=5*-67_6(g(zg&b%emhs8pb%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','traininghub.herokuapp.com']
 
 ########## EMAIL CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
@@ -64,6 +64,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 )
 
 ROOT_URLCONF = 'project1.urls'
@@ -91,19 +92,29 @@ WSGI_APPLICATION = 'project1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+# DATABASES = {
+#   'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#        'NAME' :'pta_expansion',
+#        'USER':'root',
+#        'PASSWORD':'priyoop666',
+#        'HOST':'localhost',
+#        'PORT':'3036'
+
+#    }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME' :'pta_expansion',
-        'USER':'root',
-        'PASSWORD':'priyoop666',
-        'HOST':'localhost',
-        'PORT':'3036'
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
+import dj_database_url
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -125,8 +136,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(os.path.join(os.path.dirname(BASE_DIR)),'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, os.path.join("static_storage")),)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = '/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
