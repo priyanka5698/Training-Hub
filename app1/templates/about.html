@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<style>
+<style type="text/css">
     h3{
      color:skyblue;
     }
@@ -21,6 +21,20 @@
   .collection{
   width:50%;
   }
+   @media only screen and (max-device-width: 480px) {
+    h4 {
+    color: white;
+    Padding-left: 14px;
+}
+.card-panel {
+    padding: 5px;
+    border-radius: 10px;
+}
+.collection {
+    width: 100%;
+}
+
+   }
     </style>
 <div class="col s12 ">
         <div class="card-panel teal">
