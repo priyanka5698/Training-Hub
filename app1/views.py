@@ -7,14 +7,18 @@ from django.contrib import messages
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponseRedirect
-from .models import Assignment1,Assignment
+from .models import Assignment1,Assignment,PythonTask,PLSQLTask,DjangoTask,NodeJSTask
 from django.core.mail import EmailMessage
 
 # Create your views here.
 @login_required
 def home(request):
-    return render(request, 'home.html')
-
+    info1 = PythonTask.objects.all()
+    print info1
+    info2 = PLSQLTask.objects.all()
+    info3 = DjangoTask.objects.all()
+    info4 = NodeJSTask.objects.all()
+    return render(request, 'home.html', {'details1': info1, 'details2': info2, 'details3': info3, 'details4': info4})
 
 def regform(request):
     if request.method == 'POST':

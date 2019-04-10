@@ -40,25 +40,20 @@ of tasks what they have been trained.</p>
 					<ul class="collapsible" data-collapsible="accordion">
 						<li>
 							<div class="collapsible-header">
-								<i class="material-icons">expand_more</i>First Week Task</div>
+								<i class="material-icons">expand_more</i>Week Based Task</div>
 							<div class="collapsible-body">
-								<p>Lorem ipsum dolor sit amet.</p>
+								{% if details1.count != 0 %}
+								 {% for s in details1 %}
+								<p>{{ s.Task }} </p>
+								<p>Topic: &nbsp;{{s.Topic}}</p>
+								<ol><li>{{s.Question1}}</li><li>{{s.Question2}}</li><li>{{s.Question3}}</li><li>{{s.Question4}}</li><li>{{s.Question5}}</li></ol>
+								{% endfor %}
+								{% else %}
+								<p>There is no task assigned till yet</p>
+{% endif %}
 							</div>
 						</li>
-						<li>
-							<div class="collapsible-header">
-								<i class="material-icons">expand_more</i>Second Week Task</div>
-							<div class="collapsible-body">
-								<p>Lorem ipsum dolor sit amet.</p>
-							</div>
-						</li>
-						<li>
-							<div class="collapsible-header">
-								<i class="material-icons">expand_more</i>Third Week Task</div>
-							<div class="collapsible-body">
-								<p>Lorem ipsum dolor sit amet.</p>
-							</div>
-						</li>
+
 					</ul>
 				</div>
 			</div>
@@ -74,25 +69,20 @@ of tasks what they have been trained.</p>
 				<ul class="collapsible" data-collapsible="accordion">
 					<li>
 						<div class="collapsible-header">
-							<i class="material-icons">expand_more</i>First Week Task</div>
+							<i class="material-icons">expand_more</i>Week Based Task</div>
 						<div class="collapsible-body">
-							<p>Lorem ipsum dolor sit amet.</p>
+							{% if details2.count != 0 %}
+								 {% for s in details2 %}
+								<p>{{ s.Task }} </p>
+								<p>Topic: &nbsp;{{s.Topic}}</p>
+								<ol><li>{{s.Question1}}</li><li>{{s.Question2}}</li><li>{{s.Question3}}</li><li>{{s.Question4}}</li><li>{{s.Question5}}</li></ol>
+							    {% endfor %}
+							{% else %}
+								<p>There is no task assigned till yet</p>
+{% endif %}
 						</div>
 					</li>
-					<li>
-						<div class="collapsible-header">
-							<i class="material-icons">expand_more</i>Second Week Task</div>
-						<div class="collapsible-body">
-							<p>Lorem ipsum dolor sit amet.</p>
-						</div>
-					</li>
-					<li>
-						<div class="collapsible-header">
-							<i class="material-icons">expand_more</i>Third Week Task</div>
-						<div class="collapsible-body">
-							<p>Lorem ipsum dolor sit amet.</p>
-						</div>
-					</li>
+
 				</ul>
 			</div>
 		</div>
@@ -105,25 +95,20 @@ of tasks what they have been trained.</p>
 				<ul class="collapsible" data-collapsible="accordion">
 					<li>
 						<div class="collapsible-header">
-							<i class="material-icons">expand_more</i>First Week Task</div>
+							<i class="material-icons">expand_more</i>Week Based Task</div>
 						<div class="collapsible-body">
-							<p>Lorem ipsum dolor sit amet.</p>
+							{% if details3.count != 0 %}
+							 {% for s in details3 %}
+								<p>{{ s.Task }} </p>
+								<p>Topic: &nbsp;{{s.Topic}}</p>
+								<ol><li>{{s.Question1}}</li><li>{{s.Question2}}</li><li>{{s.Question3}}</li><li>{{s.Question4}}</li><li>{{s.Question5}}</li></ol>
+							    {% endfor %}
+							{% else %}
+								<p>There is no task assigned till yet</p>
+{% endif %}
 						</div>
 					</li>
-					<li>
-						<div class="collapsible-header">
-							<i class="material-icons">expand_more</i>Second Week Task</div>
-						<div class="collapsible-body">
-							<p>Lorem ipsum dolor sit amet.</p>
-						</div>
-					</li>
-					<li>
-						<div class="collapsible-header">
-							<i class="material-icons">expand_more</i>Third Week Task</div>
-						<div class="collapsible-body">
-							<p>Lorem ipsum dolor sit amet.</p>
-						</div>
-					</li>
+
 				</ul>
 			</div>
 		</div>
@@ -136,25 +121,20 @@ of tasks what they have been trained.</p>
 				<ul class="collapsible" data-collapsible="accordion">
 					<li>
 						<div class="collapsible-header">
-							<i class="material-icons">expand_more</i>First Week Task</div>
+							<i class="material-icons">expand_more</i>Week Based Task</div>
 						<div class="collapsible-body">
-							<p>Lorem ipsum dolor sit amet.</p>
+							{% if details4.count != 0 %}
+							 {% for s in details4 %}
+								<p>{{ s.Task }} </p>
+								<p>Topic: &nbsp;{{s.Topic}}</p>
+								<ol><li>{{s.Question1}}</li><li>{{s.Question2}}</li><li>{{s.Question3}}</li><li>{{s.Question4}}</li><li>{{s.Question5}}</li></ol>
+							    {% endfor %}
+							{% else %}
+								<p>There is no task assigned till yet</p>
+{% endif %}
 						</div>
 					</li>
-					<li>
-						<div class="collapsible-header">
-							<i class="material-icons">expand_more</i>Second Week Task</div>
-						<div class="collapsible-body">
-							<p>Lorem ipsum dolor sit amet.</p>
-						</div>
-					</li>
-					<li>
-						<div class="collapsible-header">
-							<i class="material-icons">expand_more</i>Third Week Task</div>
-						<div class="collapsible-body">
-							<p>Lorem ipsum dolor sit amet.</p>
-						</div>
-					</li>
+
 				</ul>
 			</div>
 		</div>

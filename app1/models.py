@@ -54,4 +54,57 @@ class Assignment1(models.Model):
     CourseName= models.CharField(max_length=50,choices=CourseName, default='Python', verbose_name="Course")
 
     def __str__(self):
-        self.TraineeName
+        return self.TraineeName
+
+
+class PythonTask(models.Model):
+    Task = models.CharField(max_length=100)
+    Topic = models.CharField(max_length=100)
+    Question1 = models.CharField(max_length=500)
+    Question2 = models.CharField(max_length=500)
+    Question3 = models.CharField(max_length=500)
+    Question4 = models.CharField(max_length=500)
+    Question5 = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.Task
+
+
+class PLSQLTask(models.Model):
+    Task = models.CharField(max_length=100)
+    Topic = models.CharField(max_length=100)
+    Question1 = models.CharField(max_length=500)
+    Question2 = models.CharField(max_length=500)
+    Question3 = models.CharField(max_length=500)
+    Question4 = models.CharField(max_length=500)
+    Question5 = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.Task
+
+
+class DjangoTask(models.Model):
+    Task = models.CharField(max_length=100)
+    Topic = models.CharField(max_length=100)
+    Question1 = models.CharField(max_length=500)
+    Question2 = models.CharField(max_length=500)
+    Question3 = models.CharField(max_length=500)
+    Question4 = models.CharField(max_length=500)
+    Question5 = models.CharField(max_length=500)
+
+    def __str__(self):
+       return self.Task
+
+
+class NodeJSTask(models.Model):
+    Task = models.CharField(max_length=100)
+    Topic = models.CharField(max_length=100)
+    Question1 = models.CharField(max_length=500)
+    Question2 = models.CharField(max_length=500)
+    Question3 = models.CharField(max_length=500)
+    Question4 = models.CharField(max_length=500)
+    Question5 = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.Task
+
