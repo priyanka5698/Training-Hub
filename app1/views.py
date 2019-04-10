@@ -14,7 +14,6 @@ from django.core.mail import EmailMessage
 @login_required
 def home(request):
     info1 = PythonTask.objects.all()
-    print info1
     info2 = PLSQLTask.objects.all()
     info3 = DjangoTask.objects.all()
     info4 = NodeJSTask.objects.all()
